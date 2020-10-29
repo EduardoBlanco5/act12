@@ -2,7 +2,7 @@
 
 ArregloDinamico::ArregloDinamico()
 {
-    arreglo = new int[MAX];
+    arreglo = new string[MAX];
     cont = 0;
     tam = MAX;
 }
@@ -12,17 +12,17 @@ ArregloDinamico::~ArregloDinamico()
     delete[] arreglo;
 }
 
-void ArregloDinamico::insertar_final(int v)
+void ArregloDinamico::insertar_final(const string &s)
 {
     if(cont == tam)
     {
         expandir();
     }
-    arreglo[cont] = v;
+    arreglo[cont] = s;
     cont++;
 }
 
-void ArregloDinamico::insertar_inicio(int v)
+void ArregloDinamico::insertar_inicio(const string &s)
 {
     if(cont == tam)
     {
@@ -32,7 +32,7 @@ void ArregloDinamico::insertar_inicio(int v)
     {
             arreglo[i] = arreglo[i-1]; 
     }
-    arreglo[0] = v;
+    arreglo[0] = s;
     cont++;
 }
 
@@ -43,7 +43,7 @@ size_t ArregloDinamico::size()
 
 void ArregloDinamico::expandir()
 {
-    int *nuevo = new int[tam+MAX];
+    string *nuevo = new string[tam+MAX];
 
     for(size_t i=0; i<cont; i++)
     {

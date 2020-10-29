@@ -2,25 +2,26 @@
 #include "ArregloDinamico.h"
 using namespace std;
 
-void Modificar(int *a)
-{
-
-}
-
 int main()
 {
     ArregloDinamico arreglo;
-    arreglo.insertar_final(5);
-    arreglo.insertar_final(4);
-    arreglo.insertar_final(3);
-    arreglo.insertar_final(2);
-    arreglo.insertar_inicio(6);
+
+    arreglo.insertar_final("A"); 
+    arreglo.insertar_final("N"); 
+    arreglo.insertar_final("C"); 
+    arreglo.insertar_final("O"); 
+    arreglo.insertar_final(" "); 
+    arreglo.insertar_final("G"); 
+    arreglo.insertar_final("L"); 
+    arreglo.insertar_final("Z");
+    arreglo.insertar_inicio("L"); 
+    arreglo.insertar_inicio("B"); 
 
     for(size_t i = 0; i< arreglo.size(); i++)
     {
         cout << arreglo[i] << " ";
     }
-    cout << endl;
+    cout <<"\n"<<endl;
     
     system("pause");
 }
